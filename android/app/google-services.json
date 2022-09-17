@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "137375634524",
+    "project_id": "licencemobile",
+    "storage_bucket": "licencemobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137375634524:android:7b96f6e9c12deb4654c299",
+        "android_client_info": {
+          "package_name": "com.example.licence_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "137375634524-tqs6680n4pujieqgobb7c0otm1gt12q3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2M18oKJ7uYyf9XBY3en-W2cJyow0t3Oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137375634524-tqs6680n4pujieqgobb7c0otm1gt12q3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
