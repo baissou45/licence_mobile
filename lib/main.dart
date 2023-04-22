@@ -34,10 +34,10 @@ class MyApp extends StatelessWidget {
       imageSrc: "assets/images/logo.png",
       text: "SGIME - Etudiants",
       textType: TextType.TyperAnimatedText,
-      textStyle: TextStyle(
+      textStyle: const TextStyle(
         fontSize: 30.0,
       ),
-      colors: [
+      colors: const [
         Colors.purple,
         Colors.blue,
         Colors.yellow,
