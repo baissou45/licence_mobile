@@ -6,14 +6,14 @@ import 'package:licence_mobile/widget/widget.dart';
 class Api {
   static geturl() {
     // return "http://10.0.2.2:8000/api/";
-    return "http://192.168.1.158:8000/api/";
-    // return "http://192.168.43.8:8000/api/";
+    // return "http://192.168.100.26:8000/api/";
+    return "http://192.168.43.78:8000/api/";
   }
 
   static externalGeturl() {
     // return "http://10.0.2.2:8000/";
-    return "http://192.168.1.158:8000/";
-    // return "http://192.168.43.8:8000/";
+    // return "http://192.168.100.26:8000/";
+    return "http://192.168.43.78:8000/";
   }
 
   static post(Map data, String lien, {bool promo = false}) async {
@@ -24,6 +24,7 @@ class Api {
       lien += '/${promtion['promo']}';
     }
 
+    // print(tokken);
     print(Uri.parse(Api.geturl() + lien));
     var response =
         await http.post(Uri.parse(Api.geturl() + lien), body: data, headers: {
@@ -45,7 +46,8 @@ class Api {
       promtion = jsonDecode(promtion);
       lien += '/${promtion['promo']}';
     }
-    print(lien);
+    // print(tokken);
+    print(Uri.parse(Api.geturl() + lien));
     var response = await http.get(Uri.parse(Api.geturl() + lien), headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',

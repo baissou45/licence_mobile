@@ -7,7 +7,7 @@ class User {
   late String role;
   late String tel;
   late String mail;
-  late String img;
+  String? img;
   // late String sexe;
 
   User({

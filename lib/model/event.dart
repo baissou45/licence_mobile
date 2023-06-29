@@ -46,10 +46,10 @@ class Event {
 
   static Future<List<Event>> all() async {
     var jsonData = await Api.get('programmes/all', promo: true);
-    DateTime datey = DateTime.now();
+    // DateTime datey = DateTime.now();
     List<Event> events = [];
     for (var json in jsonData) {
-      events.add(Event.fromjson(json));
+      events.add(Event.fromjson(json[0]));
     }
     // var day = events[0].dateDebut.day;
     return events;

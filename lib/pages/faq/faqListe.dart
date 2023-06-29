@@ -131,7 +131,7 @@ class _FAQState extends State<FAQ> {
                     image: DecorationImage(
                       colorFilter: ColorFilter.mode(
                           Colors.black.withOpacity(0.7), BlendMode.luminosity),
-                      image: AssetImage("assets/images/faqs.jpeg"),
+                      image: const AssetImage("assets/images/faqs.jpeg"),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -148,7 +148,7 @@ class _FAQState extends State<FAQ> {
                 ),
               ],
             ),
-            failure: Center(
+            failure: const Center(
               child: Text('Aucun FAQ ne repond à votre recherche :('),
             ),
             filter: (question) => [
@@ -169,8 +169,8 @@ class _FAQState extends State<FAQ> {
                 title: Text(question.titre),
                 subtitle: Column(
                   children: [
-                    Text(question.description.substring(0, 55) + ' ...'),
-                    Divider()
+                    // Text('${question.description.substring(0, 55)} ...'),
+                    const Divider()
                   ],
                 ),
                 // trailing: Text('${question.etapes} yo'),
@@ -178,7 +178,7 @@ class _FAQState extends State<FAQ> {
             ),
           ),
         ),
-        child: Icon(Icons.search),
+        child: const Icon(Icons.search),
       ),
     );
   }

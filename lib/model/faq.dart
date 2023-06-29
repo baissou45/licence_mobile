@@ -11,8 +11,8 @@ class Question {
 
   static Question fromjson(var json) => Question(
         titre: json['titre'],
-        // description: json['description'],
-        description: json['etapes'],
+        description: json['description'].toString(),
+        // description: json['etapes'],
         etapes: json['etapes'],
       );
 

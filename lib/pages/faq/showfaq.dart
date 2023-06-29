@@ -16,6 +16,7 @@ class ShowFaq extends StatelessWidget {
       ),
       body: Center(
         child: Container(
+          width: widht,
           decoration: BoxDecoration(
             image: DecorationImage(
               colorFilter: ColorFilter.mode(
@@ -35,17 +36,17 @@ class ShowFaq extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: height / 20.0),
+              SizedBox(height: height / 30.0),
               Container(
                   padding: EdgeInsets.symmetric(horizontal: widht / 50.0),
                   child: Text(
                     faq.description,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                     ),
                   )),
-              SizedBox(height: height / 50.0),
+              SizedBox(height: height / 30.0),
               Text(
                 "Etapes à suivre",
                 style: TextStyle(

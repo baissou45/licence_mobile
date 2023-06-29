@@ -57,8 +57,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        // home: example1,
-        home: Botom_Nav(),
+        home: LoginMiddle(),
+        // home: Botom_Nav(),
         // home: Activite(type: "ex"),
       ),
     );

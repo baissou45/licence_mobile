@@ -40,6 +40,8 @@ class _CoursState extends State<Cours> {
   final List<Map<String, dynamic>> _items = [];
   String userRole = "";
 
+  bool load = false;
+
 // setState(() {
 //       dateDebut = DateTime(selectedDate.year, selectedDate.month,
 //           selectedDate.day, selectedTime.hour, selectedTime.minute);
@@ -403,6 +405,10 @@ class _CoursState extends State<Cours> {
   }
 
   getEvent() async {
+    setState(() {
+      load = true;
+    });
+
     await Event.all().then((events) {
       setState(() {
         events.forEach((event) {
@@ -454,6 +460,10 @@ class _CoursState extends State<Cours> {
         });
       });
     });
+
+    setState(() {
+      load = false;
+    });
   }
 
   getData() async {
@@ -490,7 +500,7 @@ class _CoursState extends State<Cours> {
           mainIcon: Icon(Icons.menu),
         ),
       ),
-      body: _events.isEmpty
+      body: load
           ? Center(
               child: CircularProgressIndicator(),
             )

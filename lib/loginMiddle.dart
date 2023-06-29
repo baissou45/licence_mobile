@@ -63,6 +63,8 @@ class _LoginMiddleState extends State<LoginMiddle> {
   @override
   redirect() async {
     // await Widgets.delPref('promotion');
+    // await Widgets.delPref('token');
+
     var token = await Widgets.getPref('token');
     if (token == null) {
       Navigator.of(context).pushAndRemoveUntil(
